@@ -1,0 +1,10 @@
+
+path='C:\Users\erezs\Videos\Movies';
+    for ii = 1:6
+
+        moviefile = possibleMoviesCell{ii};
+        
+        %CHANGE FILE PATH FOR WHEREVER THE VIDEOS ARE ON EXPERIMENTAL
+        %COMPUTER
+        moviename = strcat(path,'\',moviefile);
+        [movie, movduration, fps,imgw,imgh] = Screen('OpenMovie', wpnt, moviename);

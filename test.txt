@@ -1,0 +1,21 @@
+
+
+
+Testing the time stamp differance:
+23-Aug-2023 22:25:10 : 1st_SystemTimeStamp Tobii : 448188168787
+23-Aug-2023 22:25:10 : BioSignals test 1 time    : 448187.7480004
+23-Aug-2023 22:25:10 : 2nd_SystemTimeStamp Tobii : 448188265454
+23-Aug-2023 22:25:10 : BioSignals test 2 time    : 448187.7480099
+23-Aug-2023 22:25:10 : 3ed_SystemTimeStamp Tobii : 448188365453
+23-Aug-2023 22:25:10 : BioSignals test 3 time    : 448187.7480150
+
+
+Testing the time stamp differance:
+23-Aug-2023 23:50:16 : 1st_SystemTimeStamp Tobii : 453294185166
+23-Aug-2023 23:50:16 : BioSignals test 1 time    : 453293.3282803
+23-Aug-2023 23:50:16 : 2nd_SystemTimeStamp Tobii : 453294385165
+23-Aug-2023 23:50:16 : BioSignals test 2 time    : 453293.3282912
+23-Aug-2023 23:50:16 : 3ed_SystemTimeStamp Tobii : 453294491831
+23-Aug-2023 23:50:16 : BioSignals test 3 time    : 453293.3282973
+
+
