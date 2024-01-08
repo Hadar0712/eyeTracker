@@ -67,7 +67,7 @@ all the out file sould look like this:
 - run "All_numbers.ipynb" to test the data and smoothen it out.
 - then run "correlation.ipynb" to see the resolts.
   <br/><br/>
-examples included in examples folder.
+examples included in Notebooks folder.
   <br/><br/>
 ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/1393d6a2-d188-4bb4-9a4c-17e8ae71dee6)
   <br/><br/>
