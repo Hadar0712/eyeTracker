@@ -35,8 +35,9 @@ plux software should be running and recording:
 - to run the file you need sevral prameters: "Subject_name,domEye,randomized,run"
 
 <br/><br/>
-then you run it in the command window example: "Tobi("andrey","both",7,1)"
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/a1804932-9d40-41aa-95d0-b77c3cbe3e2c)
+then you run it in the command window example: 
+![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/6ff8fcb0-5c8d-4648-99a2-179162d444f1)
+
 <br/><br/>
 <br/><br/>
 <br/><br/>
