@@ -3,19 +3,28 @@
 ***This file is the finel project of Hadar Yehuda and Andrey Oppenheimer with Holon Institute of Technology's Moderator:Dr. Simony Erez***
 <br/><br/>
 <br/><br/>
-# eyeTracker
 
+# EyeTracker
+
+Tobii Pro SDK reference guide: https://developer.tobiipro.com/matlab/matlab-sdk-reference-guide.html
+<br/><br/>
+
+# Psychtoolbox-3
+
+- Psychtoolbox git :https://github.com/Psychtoolbox-3/Psychtoolbox-3
+- Site: http://psychtoolbox.org/
+<br/><br/>
+
+# PLUX Biosignals
+- plux documentation : https://support.pluxbiosignals.com/wp-content/uploads/2021/11/OpenSignals_Manual.pdf
+![External Image](http://biosignalplux.gentechmd.co/wp-content/uploads/2021/06/software-1024x585.jpg)
+- the plux LSL repo for matlab documantation: https://github.com/pluxbiosignals/opensignals-samples/tree/master
+<br/><br/>
+# Getting Started 
 - before running the code:
 plux software should be running and recording: 
 
-- plux documentation : https://support.pluxbiosignals.com/wp-content/uploads/2021/11/OpenSignals_Manual.pdf
-![External Image](http://biosignalplux.gentechmd.co/wp-content/uploads/2021/06/software-1024x585.jpg)
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-- the plux LSL repo for matlab documantation: https://github.com/pluxbiosignals/opensignals-samples/tree/master
+
 
 - LSL server should be enabled in plux using the guide in the plux documentation.
 
@@ -38,8 +47,6 @@ plux software should be running and recording:
 then you run it in the command window example: 
 ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/6ff8fcb0-5c8d-4648-99a2-179162d444f1)
 
-<br/><br/>
-<br/><br/>
 <br/><br/>
 <br/><br/>
 ## Output
