@@ -84,3 +84,47 @@ examples included in Notebooks folder.
 ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/54244d7f-01b4-4467-8bf6-8564e686c5bc)
 <br/><br/>
 
+## Bibliography
+   <br/><br/>
+[1]
+S. D. &. P. M. H. Goldinger, " Pupil dilation reflects the creation and retrieval of memories," Current directions in psychological science, vol. 21, no. (2), pp. 90-95, 2012.
+   <br/><br/>
+[2]
+I. E. T. Loewenfeld, "Pupil: Anatomy, Physiology, and Clinical Applications," Iowa State University Press, 1993.
+   <br/><br/>
+[3]
+J. L. Barbu, " Learning from the pupil Studies of basic mechanisms and clinical application," The MIT Press, January 2004.
+   <br/><br/>
+[4]
+S. C. C. J. Foroughi CK, "Pupil size as a measure of within task learning," Psychophysiology, p. 54:1436–1443, 2017.
+   <br/><br/>
+[5]
+K. K. e. al, "Exploring the Usage of Pupil Diameter to Elicit Valence and aRousal," DiVA, vol. Session 8, no. Body Language, Nov. 2017.
+   <br/><br/>
+[6]
+TOBII, "Tobii-pro-spectrum," [Online]. Available: https://www.tobii.com/products/eye-trackers/screen-based/tobii-pro-spectrum .
+   <br/><br/>
+[7]
+pluxbiosignals, "github," [Online]. Available: https://github.com/pluxbiosignals/biosignalsnotebooks.
+   <br/><br/>
+[8]
+A. C. S. M. A. G. a. K. R. G. L. Thaler, "What is the best fixation target? The effect of target shape on stability of fixational eye movements," Vision Research,, vol. 76, p. 31–42, Jan. 2013.
+   <br/><br/>
+[9]
+T. e. a. Nakano, "Blink-related momentary activation of the default mode network while viewing videos," Proceedings of the National Academy of Sciences of the United States of America , vol. vol. 110, no. 2, pp. 702-6., 2013.
+   <br/><br/>
+[10]
+"pluxbiosignals," [Online]. Available: https://www.pluxbiosignals.com.
+   <br/><br/>
+[11]
+TOBII, "matlab-sdk-reference-guide," [Online]. Available: https://developer.tobiipro.com/matlab/matlab-sdk-reference-guide.html.
+   <br/><br/>
+[12]
+tobii-pro-sdk, "https://developer.tobii.com/tobii-pro-sdk/," TOBII. [Online].
+   <br/><br/>
+[13]
+"psychtoolbox," [Online]. Available: http://psychtoolbox.org/.
+   <br/><br/>
+[14]
+D. A. R. &. N. M. Niehorster, "Titta: A toolbox for creating PsychToolbox and Psychopy experiments with Tobii eye trackers," Behav, vol. Res 52, no. 5, p. 1970–1979, 2020.
+   <br/><br/>
