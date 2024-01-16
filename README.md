@@ -1,130 +1,45 @@
+Usage instructions for using the Titta class are found in [the Titta documentation](../readme.md).
 
+### Working on the source
+The enclosed `TittaMex.sln` file is to be opened and built with Visual Studio 2022 (last tested with version 17.2.4).
 
-***This file is the finel project of Hadar Yehuda and Andrey Oppenheimer with Holon Institute of Technology's Moderator:Dr. Simony Erez***
-<br/><br/>
-<br/><br/>
+### Building the mex files
+Run `makeTittaMex.m` to build the mex file.
 
-# EyeTracker
+32-bit builds are no longer supported on Windows (they have never been on Linux). The last version of Titta/TittaMex supporting 32-bit Matlab is [available here](https://github.com/dcnieho/Titta/releases/tag/last_32bit_version).
 
-Tobii Pro SDK reference guide: https://developer.tobiipro.com/matlab/matlab-sdk-reference-guide.html
-<br/><br/>
+For building the Linux mex file the default gcc version 11.2.0 included with Ubuntu 22.04 was used.
+(The mex file currently does not build with gcc 9.3.0 provided in the mingw64 distribution that comes with Octave 6.4.0 on Windows.)
+For compatibility with an earlier version of Ubuntu, either install the right GLIBCXX version or recompile following the instructions here. See [this issue](https://github.com/dcnieho/Titta/issues/40) for more information.
 
-# Psychtoolbox-3
+### Required environment variables
+Some environment variables must be set when working on the code or building it from Visual Studio. Here are the values i used (at the time of writing):
+- `MATLAB_ROOT`: `C:\Program Files\MATLAB\R2019b`
+- `PYTHON_ROOT`: `C:\Program Files\PsychoPy3`
 
-- Psychtoolbox git :https://github.com/Psychtoolbox-3/Psychtoolbox-3
-- Site: http://psychtoolbox.org/
-<br/><br/>
+### Dependencies
+#### [readerwriterqueue](https://github.com/cameron314/readerwriterqueue)
+readerwriterqueue located at `deps/include/readerwriterqueue` is required for compiling Titta. Make sure you clone the Titta repository including all submodules so that this dependency is available.
 
-# PLUX Biosignals
-- plux documentation : https://support.pluxbiosignals.com/wp-content/uploads/2021/11/OpenSignals_Manual.pdf
-![External Image](http://biosignalplux.gentechmd.co/wp-content/uploads/2021/06/software-1024x585.jpg)
-- the plux LSL repo for matlab documantation: https://github.com/pluxbiosignals/opensignals-samples/tree/master
-<br/><br/>
-# Getting Started 
-- before running the code:
-plux software should be running and recording: 
+#### [Tobii Pro SDK](https://www.tobiipro.com/product-listing/tobii-pro-sdk/)
+To update the Tobii Pro C SDK used to build Titta against, you need to manually put the some files in the right place:
+1. The \*.h include files are placed in `\TittaMex\deps\include`
+2. The Windows `Tobii_C_SDK\64\lib\tobii_research.lib` link library is placed in `\TittaMex\deps\lib`.
+3. The \*.dll and \*.so files are placed in the respective output directories, `\TittaMex\TittaMex\64\Windows` and `\TittaMex\TittaMex\64\Linux`, respectively.
 
+#### [PsychoPy](https://www.psychopy.org/) and [PyBind11](https://github.com/pybind/pybind11)
+Please note that the code for the Python wrapper is currently not actively maintained and will not build as is now. However, assuming its updated, the following steps will build the code:
+1. Make sure the PsychoPy version you want to work with is installed.
+2. Make sure the `PYTHON_ROOT` environment variable is set to the location of your PsychoPy installation.
+3. Install PyBind11: in the root folder of your PsychoPy installation, execute `python -m pip install pybind11`
+4. As per [here](https://docs.microsoft.com/en-us/visualstudio/python/working-with-c-cpp-python-in-visual-studio?view=vs-2019#prerequisites), make sure you have the Python Development workload for visual studio installed. Note however that you can unselect the Python 3 installation, the web tools and the miniconda installation that it by default installs, as we will be using the PsychoPy installation's Python environment. Check the "Python native development tools" option.
 
+### Set up the Python environment for Visual Studio Python integration
+Last, visual studio needs to be able to find your PsychoPy's Python environment. To do so, add a new Python environment, choose existing environment, and point it to the root of your PsychoPy install. In my case, that is `C:\Program Files\PsychoPy3`.
 
-- LSL server should be enabled in plux using the guide in the plux documentation.
-
-
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/cbf746a8-c7e5-4981-b18e-d8d7e107afb7)
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-
-
-## Tobi.m file
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/5b83590e-a337-459f-b937-dc5d7d0485bc)
-<br/><br/>
-<br/><br/>
-
-- to run the file you need sevral prameters: "Subject_name,domEye,randomized,run"
-
-<br/><br/>
-then you run it in the command window example: 
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/6ff8fcb0-5c8d-4648-99a2-179162d444f1)
-
-<br/><br/>
-<br/><br/>
-## Output
-<br/><br/>
-
-- save for each subject the opensignals data .
-<br/><br/>
-all the out file sould look like this:
-<br/><br/>
-  ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/64d858aa-a092-4928-87b4-bfb9328cc86a)
-<br/><br/>
-
-## Resampling and orgenaizing using python
-<br/><br/>
-
-- final_project.ipynb will make .csv files for each movie :
- <br/><br/>
-  ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/ebc12b87-811d-41dd-9203-7493b4526e03)
-<br/><br/>
-- change the paths in the python file:
-<br/><br/>
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/7be43dbd-bd0e-4e09-8739-f377b19e6551)
-<br/><br/>
-
-## Statistics
-- run "All_numbers.ipynb" to test the data and smoothen it out.
-- then run "correlation.ipynb" to see the resolts.
-  <br/><br/>
-examples included in Notebooks folder.
-  <br/><br/>
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/1393d6a2-d188-4bb4-9a4c-17e8ae71dee6)
-  <br/><br/>
-  ![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/5ba0dae6-601a-40ce-88b4-253a3c5eb2f8)
-   <br/><br/>
-![image](https://github.com/Hadar0712/eyeTracker/assets/61351955/54244d7f-01b4-4467-8bf6-8564e686c5bc)
-<br/><br/>
-
-## Bibliography
-   <br/><br/>
-[1]
-S. D. &. P. M. H. Goldinger, " Pupil dilation reflects the creation and retrieval of memories," Current directions in psychological science, vol. 21, no. (2), pp. 90-95, 2012.
-   <br/><br/>
-[2]
-I. E. T. Loewenfeld, "Pupil: Anatomy, Physiology, and Clinical Applications," Iowa State University Press, 1993.
-   <br/><br/>
-[3]
-J. L. Barbu, " Learning from the pupil Studies of basic mechanisms and clinical application," The MIT Press, January 2004.
-   <br/><br/>
-[4]
-S. C. C. J. Foroughi CK, "Pupil size as a measure of within task learning," Psychophysiology, p. 54:1436–1443, 2017.
-   <br/><br/>
-[5]
-K. K. e. al, "Exploring the Usage of Pupil Diameter to Elicit Valence and aRousal," DiVA, vol. Session 8, no. Body Language, Nov. 2017.
-   <br/><br/>
-[6]
-TOBII, "Tobii-pro-spectrum," [Online]. Available: https://www.tobii.com/products/eye-trackers/screen-based/tobii-pro-spectrum .
-   <br/><br/>
-[7]
-pluxbiosignals, "github," [Online]. Available: https://github.com/pluxbiosignals/biosignalsnotebooks.
-   <br/><br/>
-[8]
-A. C. S. M. A. G. a. K. R. G. L. Thaler, "What is the best fixation target? The effect of target shape on stability of fixational eye movements," Vision Research,, vol. 76, p. 31–42, Jan. 2013.
-   <br/><br/>
-[9]
-T. e. a. Nakano, "Blink-related momentary activation of the default mode network while viewing videos," Proceedings of the National Academy of Sciences of the United States of America , vol. vol. 110, no. 2, pp. 702-6., 2013.
-   <br/><br/>
-[10]
-"pluxbiosignals," [Online]. Available: https://www.pluxbiosignals.com.
-   <br/><br/>
-[11]
-TOBII, "matlab-sdk-reference-guide," [Online]. Available: https://developer.tobiipro.com/matlab/matlab-sdk-reference-guide.html.
-   <br/><br/>
-[12]
-tobii-pro-sdk, "https://developer.tobii.com/tobii-pro-sdk/," TOBII. [Online].
-   <br/><br/>
-[13]
-"psychtoolbox," [Online]. Available: http://psychtoolbox.org/.
-   <br/><br/>
-[14]
-D. A. R. &. N. M. Niehorster, "Titta: A toolbox for creating PsychToolbox and Psychopy experiments with Tobii eye trackers," Behav, vol. Res 52, no. 5, p. 1970–1979, 2020.
-   <br/><br/>
+#### Enabling native debugging
+To be able to debug both the Python and C++ side of things with PsychoPy, you must install the debug symbols for the Python installation. This is done through the installer normally, but we don't have an option to do that with PyschoPy. So we have to add them manually. Here's how:
+1. For 64bit Python 3.6.6 (what I am using in the current example), navigate to this [download location](https://www.python.org/ftp/python/3.6.6/amd64/).
+2. Download all `*_d.msi` and `*_pdb.msi` files there (might be overkill, but better have them all).
+3. Open a cmd with admin privileges, navigate to your download location.
+4. Execute for each file a command like: `core_d.msi TARGETDIR="C:\Program Files\PsychoPy3"`, where the `TARGETDIR` is set to the location of your PsychoPy installation.

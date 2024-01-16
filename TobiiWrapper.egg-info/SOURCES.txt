@@ -1,0 +1,10 @@
+README.md
+setup.py
+TobiiWrapper/TobiiWrapper.cpp
+TobiiWrapper.egg-info/PKG-INFO
+TobiiWrapper.egg-info/SOURCES.txt
+TobiiWrapper.egg-info/dependency_links.txt
+TobiiWrapper.egg-info/requires.txt
+TobiiWrapper.egg-info/top_level.txt
+src/types.cpp
+src/utils.cpp
