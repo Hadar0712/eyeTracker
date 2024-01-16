@@ -2,7 +2,7 @@ function addTittaToPath()
 % adds titta to path, ignoring at least some of the unneeded folders
 mpath           = path;
 mpath           = strsplit(mpath, pathsep);
-opath           = fileparts(mfilename('C:\Users\erezs\OneDrive\Documents\repo\Titta\demos'));
+opath           = fileparts(mfilename('fullpath'));
 
 % remove any old path values
 opathesc        = regexptranslate('escape',opath);
